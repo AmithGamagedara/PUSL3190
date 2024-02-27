@@ -6,11 +6,13 @@ import Rankings from './pages/Rankings';
 import Learnings from './pages/Learnings';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import Header from './components/Header/Header';
 
 function App() {
 
   return (
     <BrowserRouter>
+    <Header/>
      <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/signin' element={<SignIn/>} />
