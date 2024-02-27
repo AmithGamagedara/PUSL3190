@@ -3,35 +3,35 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="bg-black bg-opacity-95 shadow-md fixed top-0 left-0 w-full">
-      <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
-        <h1 className="font-bold text-sm sm:text-xl flex flex-wrap cursor-pointer">
-          <span className="text-red-600">SL</span>
+    <header className="fixed top-0 left-0 w-full bg-[#101010]/95 shadow-md">
+      <div className="flex items-center justify-between max-w-6xl p-3 mx-auto">
+        <h1 className="flex flex-wrap text-sm font-bold cursor-pointer sm:text-xl">
+          <span className="text-[#FF1616]">SL</span>
           <span className="text-slate-50">KARATE</span>
         </h1>
         <ul className="flex gap-12 font-medium">
-          <Link to="/" >
-            <li className="hidden sm:inline text-slate-50 hover:text-red-600 duration-500">
+          <Link to="/">
+            <li className="hidden duration-500 sm:inline text-slate-50 hover:text-[#FF1616]">
               Home
             </li>
           </Link>
           <Link to="/news">
-            <li className="hidden sm:inline text-slate-50 hover:text-red-600 duration-500">
+            <li className="hidden duration-500 sm:inline text-slate-50 hover:text-[#FF1616]">
               News
             </li>
           </Link>
           <Link to="/events">
-            <li className="hidden sm:inline text-slate-50 hover:text-red-600 duration-500">
+            <li className="hidden duration-500 sm:inline text-slate-50 hover:text-[#FF1616]">
               Events
             </li>
           </Link>
           <Link to="/ranking">
-            <li className="hidden sm:inline text-slate-50 hover:text-red-600 duration-500">
+            <li className="hidden duration-500 sm:inline text-slate-50 hover:text-[#FF1616]">
               Rankings
             </li>
           </Link>
           <Link to="/learning">
-            <li className="hidden sm:inline text-slate-50 hover:text-red-600 duration-500">
+            <li className="hidden duration-500 sm:inline text-slate-50 hover:text-[#FF1616]">
               Learning
             </li>
           </Link>
@@ -40,7 +40,7 @@ export default function Header() {
         <form>
           <select
             id="languages"
-            class=" text-sm rounded-lg  block w-full p-1 text-slate-50 bg-black"
+            class=" text-sm rounded-lg  block w-full p-1 text-slate-50 bg-[#101010]"
           >
             <option selected>En</option>
             <option value="SL">Si</option>
@@ -48,7 +48,7 @@ export default function Header() {
         </form>
         <Link to="/signup">
           <button
-            class="h-10 px-6 font-medium rounded-md bg-red-600 text-white"
+            class="h-10 px-6 font-medium rounded-md bg-[#FF1616] text-white"
             type="Signup"
           >
             Sign Up

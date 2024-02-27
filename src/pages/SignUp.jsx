@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function SignUp() {
   return (
-    <div>SignUp</div>
+    <div className='py-16'>SignUp</div>
   )
 }
