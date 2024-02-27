@@ -1,0 +1,41 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #101010;
+    padding: 15px 7%;
+    color: white;
+}
+
+.logo{
+    width: 60px;
+    cursor: pointer;
+}
+
+ul{
+    flex: 1;
+    list-style: none;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+    margin: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button{
+    background-color: #ff1616;
+    color: white;
+    border-radius: 8px;
+    height: 48px;
+    width: 146px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.language{
+    padding: 0 80px;
+}
