@@ -2,6 +2,8 @@ import React from 'react'
 import Bg_Image from "../assets/bg-image.jpg";
 import Timer from '../helpers/Timer';
 import Advertistment from '../helpers/Advertistment';
+import News_n_Media from '../helpers/News_n_Media';
+import Upcoming_Events from '../helpers/Upcoming_Events';
 
 export default function Home() {
   return (
@@ -9,11 +11,13 @@ export default function Home() {
       <img
           src={Bg_Image}
           alt="SL-Karate"
-          className="mt-0 Bg-Image"
+          className="object-cover w-full h-screen mt-0 Bg-Image"
         />
 
 <Timer/>
 <Advertistment/>
+<News_n_Media/>
+<Upcoming_Events/>
         
     </div>
     

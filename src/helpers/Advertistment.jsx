@@ -1,10 +1,14 @@
 import React from 'react'
+import Ad_Banner from "../assets/Ad-banner.jpg";
 
 export default function Advertistment() {
   return (
-    <div className="bg-red-600 h-[240px] w-full flex items-center justify-center">
-    <h2 className="text-sm font-bold text-slate-50 sm:text-xl">Advertistment</h2>
-    <div className='p-10 bg-purple-500'></div>
+    <div>
+    <img
+          src={Ad_Banner}
+          alt="SL-Karate"
+          className="object-cover w-full h-48 sm:h-80"
+        />
   </div>
   )
 }
