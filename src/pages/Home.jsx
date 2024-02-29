@@ -4,10 +4,14 @@ import Timer from '../helpers/Timer';
 import Advertistment from '../helpers/Advertistment';
 import News_n_Media from '../helpers/News_n_Media';
 import Upcoming_Events from '../helpers/Upcoming_Events';
+import Karate_Gallery from '../helpers/Karate_Gallery';
+import Slider from '../components/Home_Slide';
 
 export default function Home() {
   return (
     <div>
+
+      
       <img
           src={Bg_Image}
           alt="SL-Karate"
@@ -18,6 +22,7 @@ export default function Home() {
 <Advertistment/>
 <News_n_Media/>
 <Upcoming_Events/>
+<Karate_Gallery/>
         
     </div>
     

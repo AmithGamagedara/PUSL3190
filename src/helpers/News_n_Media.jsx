@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Bg_Image from "../assets/bg-image.jpg";
 import Tournement_01 from "../assets/Tournement-01.jpg";
 
@@ -84,12 +85,12 @@ export default function News_n_Media() {
         </div>
       </div>
 
-      <a
+      <Link
+        to="/news"
         className="flex justify-end px-32 text-sm text-white sm:text-base"
-        href=""
       >
         See All
-      </a>
+      </Link>
     </div>
   );
 }

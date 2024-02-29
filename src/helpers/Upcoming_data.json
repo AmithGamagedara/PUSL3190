@@ -1,0 +1,30 @@
+[
+    {
+      "title": "Sri Lankan Karate Championship 2024",
+      "startDate": "01",
+      "startMonth": "FEB",
+      "endDate": "10",
+      "endMonth": "FEB",
+      "location": "Galle indoor stadium",
+      "moreInfo": "+ INFO"
+    },
+    {
+      "title": "Sri Lankan Karate Championship 2024 - Galle",
+      "startDate": "15",
+      "startMonth": "MAR",
+      "endDate": "25",
+      "endMonth": "MAR",
+      "location": "Galle indoor stadium",
+      "moreInfo": "+ INFO"
+    },
+    {
+      "title": "Sri Lankan Karate Championship 2024 - Western Province ",
+      "startDate": "01",
+      "startMonth": "MAR",
+      "endDate": "15",
+      "endMonth": "MAR",
+      "location": "Galle indoor stadium",
+      "moreInfo": "+ INFO"
+    }
+    
+  ]

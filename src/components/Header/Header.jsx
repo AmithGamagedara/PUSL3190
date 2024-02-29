@@ -11,6 +11,7 @@ export default function Header() {
         </h1>
         <ul className="flex gap-12 font-medium">
           <Link to="/">
+            
             <li className="hidden duration-500 sm:inline text-slate-50 hover:text-[#FF1616]">
               Home
             </li>
