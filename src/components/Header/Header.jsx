@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#101010]/95 shadow-md">
+    <header className="fixed top-0 left-0 w-full bg-[#101010]/95 shadow-lg shadow-zinc-700/50">
       <div className="flex items-center justify-between max-w-6xl p-3 px-10 mx-auto sm:p-3 sm:px-0">
         <h1 className="flex flex-wrap text-sm font-bold cursor-pointer sm:text-xl">
           <span className="text-[#FF1616]">SL</span>
