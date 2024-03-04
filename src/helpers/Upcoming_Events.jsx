@@ -14,7 +14,7 @@ const Upcoming_Event = () => {
       {data.map((card, index) => (
         <div key={index} className="m-4 mx-auto overflow-hidden bg-[#161616] shadow-md w-96 rounded-xl">
           <div className="p-4">
-            <h2 className="mb-2 text-2xl font-bold text-[#FFD600]">{card.title}</h2>
+            <h2 className="mb-2 text-2xl font-bold text-[#FFD600] line-clamp-2">{card.title}</h2>
             <div className="flex justify-between mb-2">
               <span className="font-bold text-white text-[32px]">{card.startDate}
               <span className="font-bold text-white text-[20px]"> {card.startMonth}</span>
