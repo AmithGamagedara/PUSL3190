@@ -2,7 +2,6 @@ import React from "react";
 import Tournement_01 from "../assets/Tournement-01.jpg";
 import news_data from "../helpers/News_n_Media.json";
 
-
 export default function News() {
   return (
     <div className="items-center justify-center min-h-screen px-32 py-16 bg-[#161616] text-slate-50">

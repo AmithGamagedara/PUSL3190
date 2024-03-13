@@ -10,7 +10,7 @@ export default function News_n_Media() {
       <h2 className="flex items-center justify-center p-4 font-bold underline underline-offset-1 text-sm sm:p-8 text-slate-50 sm:text-xl decoration-[#FF1616] decoration-4">
         News & Media
       </h2>
-      
+
       <div className="container flex items-center justify-center min-h-screen mx-auto mt-4 sm:-mt-4">
         <div className="grid grid-cols-1 px-24 sm:grid-cols-3">
           {/* card-01 */}
@@ -18,7 +18,11 @@ export default function News_n_Media() {
             <div key={""} className="mb-12 card">
               <div className="flex flex-col px-8">
                 <div className="overflow-hidden rounded-xl height-[1200px]">
-                  <img className="object-cover w-full h-36 sm:h-60" src={news_card.image} alt="" />
+                  <img
+                    className="object-cover w-full h-36 sm:h-60"
+                    src={news_card.image}
+                    alt=""
+                  />
                 </div>
                 <h5 className="mt-4 text-xl font-semibold text-white sm:text-2xl line-clamp-2">
                   {news_card.title}
