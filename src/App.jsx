@@ -7,6 +7,7 @@ import Learnings from "./pages/Learnings";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Header from "./components/Header/Header";
+import News_Details from "./components/News_Container";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/ranking" element={<Rankings />} />
         <Route path="/learning" element={<Learnings />} />
+        <Route path="/news/:id" element={<News_Details/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -5,7 +5,7 @@ import { GrLocation } from "react-icons/gr";
 export default function Events() {
   return (
     <div className="items-center justify-center min-h-screen px-32 py-16 bg-[#161616]">
-      <h1 className="pt-10 pb-6 text-sm font-bold sm:text-xl">
+      <h1 className="pt-10 pb-6 text-sm font-bold sm:text-2xl">
         <span className="text-[#FF1616]">Upcoming Events</span>
       </h1>
       {data.map((card, index) => (

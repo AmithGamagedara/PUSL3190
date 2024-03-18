@@ -1,18 +1,20 @@
 import React from "react";
 import Tournement_01 from "../assets/Tournement-01.jpg";
 import news_data from "../helpers/News_n_Media.json";
+import { Link } from 'react-router-dom';
+
 
 export default function News() {
   return (
     <div className="items-center justify-center min-h-screen px-32 py-16 bg-[#161616] text-slate-50">
-      <h1 className="pt-10 pb-6 text-sm font-bold sm:text-xl">
+      <h1 className="pt-10 pb-6 text-sm font-bold sm:text-2xl">
         <span className="text-[#FF1616]">News & Media</span>
       </h1>
 
-      {/* News card - 01 */}
+      {/* News card */}
       {news_data.map((news_card) => (
-        <div key={""}>
-          <a href={" ../components/News_Container.jsx"}>
+        <div key={news_card.id}>
+          <Link Link to="/news/:id">
             <div className="flex mb-8 overflow-hidden shadow-lg rounded-xl bg-zinc-800">
               {/* Left Side (Image) */}
               <div className="w-1/4">
@@ -31,7 +33,7 @@ export default function News() {
                 <p className="italic text-white">{news_card.description}</p>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       ))}
     </div>

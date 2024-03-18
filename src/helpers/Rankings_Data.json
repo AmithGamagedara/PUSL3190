@@ -1,0 +1,20 @@
+{
+    "categories": [
+      {
+        "name": "Category 1",
+        "rankings": [
+          { "rank": 1, "firstName": "John", "lastName": "Doe", "totalPoints": 100 },
+          { "rank": 2, "firstName": "Jane", "lastName": "Doe", "totalPoints": 90 },
+          { "rank": 3, "firstName": "Alice", "lastName": "Smith", "totalPoints": 80 }
+        ]
+      },
+      {
+        "name": "Category 2",
+        "rankings": [
+          { "rank": 1, "firstName": "Bob", "lastName": "Johnson", "totalPoints": 95 },
+          { "rank": 2, "firstName": "Mary", "lastName": "Williams", "totalPoints": 85 },
+          { "rank": 3, "firstName": "David", "lastName": "Brown", "totalPoints": 75 }
+        ]
+      }
+    ]
+  }
