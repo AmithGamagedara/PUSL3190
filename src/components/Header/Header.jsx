@@ -1,14 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/SL-Karate-Logo.svg"
 
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-[#101010]/95 shadow-lg shadow-zinc-700/50">
       <div className="flex items-center justify-between max-w-6xl p-3 px-10 mx-auto sm:p-3 sm:px-0">
-        <h1 className="flex flex-wrap text-sm font-bold cursor-pointer sm:text-xl">
+
+      <div className="logo">
+        <img src={Logo} alt="Logo" className="h-6" />
+      </div>
+
+        
+        {/* <span className="flex flex-wrap text-sm font-bold cursor-pointer sm:text-xl">
           <span className="text-[#FF1616]">SL</span>
           <span className="text-slate-50">KARATE</span>
-        </h1>
+        </span> */}
+
+
+        
         <ul className="flex gap-12 font-medium">
           <Link to="/">
             <li className="hidden duration-500 sm:inline text-slate-50 hover:text-[#FF1616]">
@@ -48,7 +58,7 @@ export default function Header() {
         </form>
         <Link to="/signup">
           <button
-            class="h-8 px-4 sm:px-6 sm:h-10 text-sm sm:text-base font-medium rounded-md bg-[#FF1616] text-white"
+            class="h-8 px-4 sm:px-6 sm:h-10 text-sm sm:text-base font-medium rounded-md bg-[#FF1616] text-white hover:bg-red-600 focus:outline-none focus:bg-red-600"
             type="Signup"
           >
             Sign Up
