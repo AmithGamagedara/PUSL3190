@@ -6,6 +6,7 @@ import News_n_Media from "../helpers/News_n_Media";
 import Upcoming_Events from "../helpers/Upcoming_Events";
 import Karate_Gallery from "../helpers/Karate_Gallery";
 import Home_Slider from "../components/Landing_Page/Home_Slide";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   const deadline = new Date().getTime() + 28 * 24 * 60 * 60 * 1000;
@@ -23,6 +24,7 @@ export default function Home() {
       <News_n_Media />
       <Upcoming_Events />
       <Karate_Gallery />
+      <Footer />
     </div>
   );
 }

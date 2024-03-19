@@ -8,7 +8,7 @@ export default function Karate_Gallery() {
           <span className="text-slate-50">Photos</span>
         </h1>
 
-<div class="grid grid-cols-1 gap-2 sm:grid-cols-3">
+<div class="grid grid-cols-1 gap-2 sm:grid-cols-3 mb-8">
         <div>
             <img class="block h-full w-full object-cover object-center rounded-lg" src="https://www.wkf.net/imagenes/noticias/destacado-noticia20211120200819.jpg" alt=""/>
         </div>
