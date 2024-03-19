@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function Timer({ deadline }) {
   const calculateTimeRemaining = () => {
@@ -9,7 +9,9 @@ export default function Timer({ deadline }) {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
     return { days, hours, minutes, seconds };
@@ -37,21 +39,23 @@ export default function Timer({ deadline }) {
   };
 
   const { days, hours, minutes, seconds } = timeRemaining;
-    
+
   return (
     <div className="bg-gradient-to-tl from-[#161616] to-[#101010] py-8 sm:py-12 w-full flex items-center justify-center">
       <div className="flex flex-col items-center text-center">
-        <h1 className="font-bold underline underline-offset-1 text-sm sm:text-xl text-slate-50 sm:p-8 decoration-[#FF1616] decoration-4">Next Event</h1>
+        <h1 className="font-bold text-sm sm:text-xl text-[#FF1616] sm:p-8 ">
+          Next Event
+        </h1>
         <div className="flex items-center justify-center mb-4 space-x-4 sm:mb-12 text-slate-50">
-          {renderSquare(days, 'Days')}
+          {renderSquare(days, "Days")}
           <div className="text-sm font-bold sm:text-3xl">:</div>
-          {renderSquare(hours, 'Hours')}
+          {renderSquare(hours, "Hours")}
           <div className="text-sm font-bold sm:text-3xl">:</div>
-          {renderSquare(minutes, 'Minutes')}
+          {renderSquare(minutes, "Minutes")}
           <div className="text-sm font-bold sm:text-3xl">:</div>
-          {renderSquare(seconds, 'Seconds')}
+          {renderSquare(seconds, "Seconds")}
         </div>
       </div>
-    </div>    
+    </div>
   );
 }

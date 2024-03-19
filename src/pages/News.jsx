@@ -1,8 +1,7 @@
 import React from "react";
 import Tournement_01 from "../assets/Tournement-01.jpg";
 import news_data from "../helpers/News_n_Media.json";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 export default function News() {
   return (

@@ -211,7 +211,7 @@ export default function SignUp() {
         </form>
         <div className="flex justify-center mt-4 text-sm text-gray-600">
           Already have an account?&nbsp;&nbsp;
-          <Link to="/signin"  className="text-blue-600 hover:underline">
+          <Link to="/signin" className="text-blue-600 hover:underline">
             Sign in
           </Link>
         </div>

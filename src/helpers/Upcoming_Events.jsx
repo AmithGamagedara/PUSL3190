@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Upcoming_Event = () => {
   return (
     <div className="w-full bg-[#161616] py-4 sm:py-8">
-      <h2 className="flex items-center justify-center p-4 font-bold underline underline-offset-1 text-sm sm:p-8 text-slate-50 sm:text-xl decoration-[#FF1616] decoration-4">
+      <h2 className="flex items-center justify-center p-4 font-bold text-sm sm:p-8 text-[#FF1616] sm:text-xl">
         Upcoming Events
       </h2>
 

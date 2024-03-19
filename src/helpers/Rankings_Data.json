@@ -1,19 +1,48 @@
 {
     "categories": [
       {
-        "name": "Category 1",
+        "name": "75kg+ Male Kumite",
         "rankings": [
-          { "rank": 1, "firstName": "John", "lastName": "Doe", "totalPoints": 100 },
-          { "rank": 2, "firstName": "Jane", "lastName": "Doe", "totalPoints": 90 },
-          { "rank": 3, "firstName": "Alice", "lastName": "Smith", "totalPoints": 80 }
+          { "rank": 1, "firstName": "Samsika", "lastName": "Rumksan", "totalPoints": 1600 },
+          { "rank": 2, "firstName": "Chamara", "lastName": "Silva", "totalPoints": 1450 },
+          { "rank": 3, "firstName": "Dilshan", "lastName": "Fernando", "totalPoints": 1400 },
+          { "rank": 4, "firstName": "Gayan", "lastName": "Ratnayake", "totalPoints": 1300 },
+          { "rank": 5, "firstName": "Hiran", "lastName": "Bandara", "totalPoints": 1250 },
+          { "rank": 6, "firstName": "Ishan", "lastName": "Jayawardena", "totalPoints": 1200 },
+          { "rank": 7, "firstName": "Janith", "lastName": "Perera", "totalPoints": 1150 },
+          { "rank": 8, "firstName": "Kamal", "lastName": "Fernando", "totalPoints": 1100 },
+          { "rank": 9, "firstName": "Lasith", "lastName": "Rajapaksa", "totalPoints": 1050 },
+          { "rank": 10, "firstName": "Malith", "lastName": "Gunaratne", "totalPoints": 1000 }
         ]
       },
       {
-        "name": "Category 2",
+        "name": "50kg+ Male Kumite",
         "rankings": [
-          { "rank": 1, "firstName": "Bob", "lastName": "Johnson", "totalPoints": 95 },
-          { "rank": 2, "firstName": "Mary", "lastName": "Williams", "totalPoints": 85 },
-          { "rank": 3, "firstName": "David", "lastName": "Brown", "totalPoints": 75 }
+          { "rank": 1, "firstName": "Nadeesha", "lastName": "Karunaratne", "totalPoints": 1550 },
+          { "rank": 2, "firstName": "Pradeep", "lastName": "Perera", "totalPoints": 1500 },
+          { "rank": 3, "firstName": "Ranjan", "lastName": "Fernando", "totalPoints": 1450 },
+          { "rank": 4, "firstName": "Saman", "lastName": "Silva", "totalPoints": 1400 },
+          { "rank": 5, "firstName": "Tharanga", "lastName": "Jayasuriya", "totalPoints": 1350 },
+          { "rank": 6, "firstName": "Udaya", "lastName": "Rathnayake", "totalPoints": 1300 },
+          { "rank": 7, "firstName": "Viraj", "lastName": "Bandara", "totalPoints": 1250 },
+          { "rank": 8, "firstName": "Waruna", "lastName": "Fernando", "totalPoints": 1200 },
+          { "rank": 9, "firstName": "Xavier", "lastName": "Gunawardena", "totalPoints": 1150 },
+          { "rank": 10, "firstName": "Yasith", "lastName": "Rajapaksa", "totalPoints": 1100 }
+        ]
+      },
+      {
+        "name": "45kg+ Female Kumite",
+        "rankings": [
+          { "rank": 1, "firstName": "Anushka", "lastName": "Perera", "totalPoints": 1700 },
+          { "rank": 2, "firstName": "Chandana", "lastName": "Silva", "totalPoints": 1650 },
+          { "rank": 3, "firstName": "Duminda", "lastName": "Fernando", "totalPoints": 1600 },
+          { "rank": 4, "firstName": "Gihan", "lastName": "Ratnayake", "totalPoints": 1550 },
+          { "rank": 5, "firstName": "Hasitha", "lastName": "Bandara", "totalPoints": 1500 },
+          { "rank": 6, "firstName": "Indika", "lastName": "Jayawardena", "totalPoints": 1450 },
+          { "rank": 7, "firstName": "Jayampathi", "lastName": "Perera", "totalPoints": 1400 },
+          { "rank": 8, "firstName": "Kumara", "lastName": "Fernando", "totalPoints": 1350 },
+          { "rank": 9, "firstName": "Lakmal", "lastName": "Rajapaksa", "totalPoints": 1300 },
+          { "rank": 10, "firstName": "Mahesh", "lastName": "Gunaratne", "totalPoints": 1250 }
         ]
       }
     ]

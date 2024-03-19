@@ -18,7 +18,9 @@ export default function Rankings() {
     <div className="items-center justify-center min-h-screen px-32 py-16 bg-[#161616]">
       <div className="container px-4 py-8 mx-auto text-white">
         <div className="flex items-center justify-between mb-4">
-          <span className="text-sm font-bold text-[#FF1616] sm:text-2xl">Ranking</span>
+          <span className="text-sm font-bold text-[#FF1616] sm:text-2xl">
+            National Rankings
+          </span>
           <div className="flex items-center">
             <span className="mr-2 text-gray-300">Category:</span>
             <select
@@ -38,20 +40,20 @@ export default function Rankings() {
         <h2 className="mb-4 text-xl font-bold text-gray-300">
           {selectedCategory.name}
         </h2>
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div className="overflow-x-auto shadow-md sm:rounded-lg">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="text-white bg-red-600 rounded-lg">
               <tr>
-                <th className="px-6 py-3 text-xs font-bold tracking-wider text-center uppercase">
+                <th className="px-6 py-3 text-sm font-bold tracking-wider text-center uppercase">
                   Rank
                 </th>
-                <th className="px-6 py-3 text-xs font-bold tracking-wider text-left uppercase">
+                <th className="px-6 py-3 text-sm font-bold tracking-wider text-left uppercase">
                   First Name
                 </th>
-                <th className="px-6 py-3 text-xs font-bold tracking-wider text-left uppercase">
+                <th className="px-6 py-3 text-sm font-bold tracking-wider text-left uppercase">
                   Last Name
                 </th>
-                <th className="px-6 py-3 text-xs font-bold tracking-wider text-center uppercase ">
+                <th className="px-6 py-3 text-sm font-bold tracking-wider text-center uppercase ">
                   Total Points
                 </th>
               </tr>
@@ -63,7 +65,9 @@ export default function Rankings() {
                   key={ranking.rank}
                 >
                   <td className="px-6 py-4 text-center whitespace-nowrap">
-                  <div className="flex items-center justify-center w-8 h-8 mx-auto border border-white rounded-full">{ranking.rank}</div>
+                    <div className="flex items-center justify-center w-8 h-8 mx-auto border border-white rounded-full">
+                      {ranking.rank}
+                    </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {ranking.firstName}

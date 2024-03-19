@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Karate Tutorial Video Beginners - Kensho Karate International",
+      "src": "../src/assets/tutorial.mp4",
+      "type": "video/mp4"
+    },
+    {
+        "title": "Karate Tutorial Video Beginners - Kensho Karate International",
+        "src": "../src/assets/tutorial.mp4",
+        "type": "video/mp4"
+      },
+    {
+      "title": "Karate Tutorial Video Beginners - Kensho Karate International",
+      "src": "../src/assets/tutorial.mp4",
+      "type": "video/mp4"
+    }
+  ]
