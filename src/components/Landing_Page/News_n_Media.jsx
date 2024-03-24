@@ -13,7 +13,7 @@ export default function News_n_Media() {
 
       <div className="container flex items-center justify-center min-h-screen mx-auto mt-4 sm:-mt-4">
         <div className="grid grid-cols-1 px-24 sm:grid-cols-3">
-          {/* card-01 */}
+          {/* card */}
           {news_data.map((news_card) => (
             <div key={news_card.id} className="mb-12 card">
               <div className="flex flex-col px-8">
