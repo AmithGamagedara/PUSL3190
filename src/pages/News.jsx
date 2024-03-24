@@ -13,7 +13,7 @@ export default function News() {
       {/* News card */}
       {news_data.map((news_card) => (
         <div key={news_card.id}>
-          <Link Link to="/news/:id">
+          <Link to="/news/:id">
             <div className="flex mb-8 overflow-hidden shadow-lg rounded-xl bg-zinc-800">
               {/* Left Side (Image) */}
               <div className="w-1/4">

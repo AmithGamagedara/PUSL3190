@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../assets/SL-Karate-Logo.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -29,7 +30,7 @@ export default function Footer() {
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024. SL Karate All Rights Reserved.
+          © 2024 <Link to="/"  className="underline">SL Karate</Link> PUSL3190 Computing Individual Project. All Rights Reserved.
         </span>
       </div>
     </footer>

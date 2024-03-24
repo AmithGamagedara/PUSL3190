@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Bg_Image from "../assets/bg-image.jpg";
-import Tournement_01 from "../assets/Tournement-01.jpg";
-import news_data from "../helpers/News_n_Media.json";
+import Bg_Image from "../../assets/bg-image.jpg";
+import Tournement_01 from "../../assets/Tournement-01.jpg";
+import news_data from "../../helpers/News_n_Media.json";
 
 export default function News_n_Media() {
   return (
@@ -15,7 +15,7 @@ export default function News_n_Media() {
         <div className="grid grid-cols-1 px-24 sm:grid-cols-3">
           {/* card-01 */}
           {news_data.map((news_card) => (
-            <div key={""} className="mb-12 card">
+            <div key={news_card.id} className="mb-12 card">
               <div className="flex flex-col px-8">
                 <div className="overflow-hidden rounded-xl height-[1200px]">
                   <img

@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../helpers/Upcoming_data.json";
+import data from "../../helpers/Upcoming_data.json";
 import { Link } from "react-router-dom";
 
 const Upcoming_Event = () => {

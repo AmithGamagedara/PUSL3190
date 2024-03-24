@@ -1,5 +1,5 @@
 import React from "react";
-import Ad_Banner from "../assets/Ad-banner.jpg";
+import Ad_Banner from "../../assets/Ad-banner.jpg";
 
 export default function Advertistment() {
   return (

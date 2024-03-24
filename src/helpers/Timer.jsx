@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-export default function Timer({ deadline }) {
+export default function Timer({ starts }) {
   const calculateTimeRemaining = () => {
     const now = new Date().getTime();
-    const difference = deadline - now;
+    const difference = starts - now;
     if (difference <= 0) {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
@@ -25,7 +25,7 @@ export default function Timer({ deadline }) {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [deadline]);
+  }, [starts]);
 
   const renderSquare = (value, label) => {
     return (
