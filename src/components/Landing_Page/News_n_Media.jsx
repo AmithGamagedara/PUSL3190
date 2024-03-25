@@ -30,12 +30,12 @@ export default function News_n_Media() {
                 <p className="mt-4 text-sm text-white sm:mt-8 sm:text-lg line-clamp-3">
                   {news_card.description}
                 </p>
-                <a
-                  href=""
+                <Link
+                  to={`/news/${news_card.id}`}
                   className="py-4 mt-8 sm:mt-12 font-semibold text-center text-white transition-all duration-200 ease-out bg-[#FF1616]  rounded-lg hover:bg-red-500 focus:scale-95"
                 >
                   Read more...
-                </a>
+                </Link>
               </div>
             </div>
           ))}

@@ -9,7 +9,6 @@ export default function News() {
       <h1 className="pt-10 pb-6 text-sm font-bold sm:text-2xl">
         <span className="text-[#FF1616]">News & Media</span>
       </h1>
-+
 
       {/* News card */}
       {news_data.map((news_card) => (
@@ -30,7 +29,9 @@ export default function News() {
                 <h2 className="mb-4 text-2xl font-semibold text-white">
                   {news_card.title}
                 </h2>
-                <p className="italic text-white">{news_card.description}</p>
+                <p className="italic text-white line-clamp-6">
+                  {news_card.description}
+                </p>
               </div>
             </div>
           </Link>

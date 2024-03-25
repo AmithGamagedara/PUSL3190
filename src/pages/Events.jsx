@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../helpers/Upcoming_data.json";
 import { GrLocation } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 export default function Events() {
   return (
@@ -9,6 +10,7 @@ export default function Events() {
         <span className="text-[#FF1616]">Upcoming Events</span>
       </h1>
       {data.map((card, index) => (
+        <Link to={`/events/${card.id}`}>
         <div
           key={index}
           className="flex mb-8 overflow-hidden shadow-lg rounded-xl bg-zinc-800"
@@ -61,15 +63,17 @@ export default function Events() {
               </p>
 
               {/* More Info Button */}
-              <a
+              <Link
+                to={`/events/${card.id}`}
                 href={card.moreInfo}
-                className="inline-block px-4 py-2 text-white transition duration-300 bg-[#FF1616] hover:bg-red-500 rounded-lg"
+                className="inline-block px-4 py-2 text-white transition duration-300 bg-red-500 rounded-lg hover:bg-[#FF1616]"
               >
                 More Info
-              </a>
+              </Link>
             </div>
           </div>
         </div>
+        </Link>
       ))}
     </div>
   );

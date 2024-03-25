@@ -10,9 +10,9 @@ const Upcoming_Event = () => {
       </h2>
 
       <div className="flex flex-wrap justify-center px-28 sm:px-32">
-        {data.map((card, index) => (
+        {data.map((card) => (
           <div
-            key={index}
+            key={card.id}
             className="m-4 mx-auto overflow-hidden bg-[#161616] shadow-md w-96 rounded-xl"
           >
             <div className="p-4">
@@ -38,9 +38,11 @@ const Upcoming_Event = () => {
               <p className="mb-4 text-sm text-white sm:text-xl font-semi-bold">
                 {card.location}
               </p>
-              <button className="w-full px-4 py-4 mx-autopy-4 font-semibold text-center text-white transition-all duration-200 ease-out bg-[#FF1616]  rounded-lg hover:bg-red-500 focus:scale-95">
-                {card.moreInfo}
-              </button>
+              <Link to={`/events/${card.id}`}>
+                <button className="w-full px-4 py-4 mx-autopy-4 font-semibold text-center text-white transition-all duration-200 ease-out bg-[#FF1616]  rounded-lg hover:bg-red-500 focus:scale-95">
+                  {card.moreInfo}
+                </button>
+              </Link>
             </div>
           </div>
         ))}
