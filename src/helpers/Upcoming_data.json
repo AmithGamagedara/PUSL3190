@@ -9,7 +9,8 @@
       "endMonth": "FEB",
       "location": "Galle indoor stadium",
       "moreInfo": "+ INFO",
-      "registrationStatus": "Open"
+      "registrationStatus": "Open",
+      "startTime": "2024-04-01T10:00:00Z"
     },
     {
       "id": 1,
@@ -21,7 +22,8 @@
       "endMonth": "MAR",
       "location": "Galle indoor stadium",
       "moreInfo": "+ INFO",
-      "registrationStatus": "Closed"
+      "registrationStatus": "Closed",
+      "startTime": "2024-04-05T15:30:00Z"
     },
     {
       "id": 2,
@@ -33,7 +35,8 @@
       "endMonth": "MAR",
       "location": "Galle indoor stadium",
       "moreInfo": "+ INFO",
-      "registrationStatus": "Open"
+      "registrationStatus": "Open",
+      "startTime": "2024-04-10T18:45:00Z"
     }
     
   ]
