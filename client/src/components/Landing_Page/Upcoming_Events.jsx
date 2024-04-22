@@ -3,53 +3,62 @@ import data from "../../helpers/Upcoming_data.json";
 import { Link } from "react-router-dom";
 
 const Upcoming_Event = () => {
-  return (
-    <div className="w-full bg-[#161616] py-4 sm:py-8">
-      <h2 className="flex items-center justify-center p-4 font-bold text-sm sm:p-8 text-[#FF1616] sm:text-xl">
-        Upcoming Events
-      </h2>
+ 
+  const sortedData = data.sort((a, b) => b.id - a.id).slice(0, 3);
 
-      <div className="flex flex-wrap justify-center px-28 sm:px-32">
-        {data.map((card) => (
-          <div
-            key={card.id}
-            className="m-4 mx-auto overflow-hidden bg-[#161616] shadow-md w-96 rounded-xl"
-          >
-            <div className="p-4">
-              <h2 className="mb-2 sm:text-2xl text-lg font-bold text-[#FFD600] sm:line-clamp-2">
-                {card.title}
-              </h2>
-              <div className="flex justify-between mb-2">
-                <span className="font-bold text-white text-[24px] sm:text-[32px]">
-                  {card.startDate}
-                  <span className="font-bold text-white text-[12px] sm:text-[20px]">
-                    {" "}
-                    {card.startMonth}
-                  </span>
-                </span>
-                <span className="font-bold text-white text-[24px] sm:text-[32px]">
-                  {card.endDate}
-                  <span className="font-bold text-white text-[12px] sm:text-[20px]">
-                    {" "}
-                    {card.endMonth}
-                  </span>
-                </span>
+  return (
+    <div className="w-full bg-[#161616] py-4 sm:py-6 ">
+      <h1 className="px-8 mt-8 text-xl font-bold cursor-pointer sm:px-32">
+      <span className="text-[#FF1616]">#Upcoming</span>
+        <span className="text-slate-50">Events</span>
+      </h1>
+
+      <div className="container mx-auto mt-4">
+        <div className="flex flex-wrap justify-center px-4 sm:px-24">
+          {sortedData.map((card) => (
+            <div
+              key={card.id}
+              className="m-4 overflow-hidden bg-[#202020] shadow-md rounded-xl"
+              style={{ width: 'calc(100% / 3 - 2rem)' }}  
+            >
+              <div className="p-4">
+                <h2 className="mb-2 text-lg font-bold text-yellow-500 sm:text-2xl line-clamp-2">
+                  {card.title}
+                </h2>
+                <div className="flex justify-between text-white">
+                  <div>
+                    <span className="text-xl font-bold sm:text-3xl">
+                      {card.startDate}
+                    </span>
+                    <span className="text-xs sm:text-lg">
+                      {" "}{card.startMonth}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-xl font-bold sm:text-3xl">
+                      {card.endDate}
+                    </span>
+                    <span className="text-xs sm:text-lg">
+                      {" "}{card.endMonth}
+                    </span>
+                  </div>
+                </div>
+                <p className="mt-2 text-sm font-semibold text-white sm:text-xl">
+                  {card.location}
+                </p>
+                <Link to={`/events/${card.id}`} className="block mt-4">
+                  <button className="w-full py-2 font-semibold text-white transition duration-150 ease-in-out bg-red-600 rounded hover:bg-red-700">
+                    {card.moreInfo}
+                  </button>
+                </Link>
               </div>
-              <p className="mb-4 text-sm text-white sm:text-xl font-semi-bold">
-                {card.location}
-              </p>
-              <Link to={`/events/${card.id}`}>
-                <button className="w-full px-4 py-4 mx-autopy-4 font-semibold text-center text-white transition-all duration-200 ease-out bg-[#FF1616]  rounded-lg hover:bg-red-500 focus:scale-95">
-                  {card.moreInfo}
-                </button>
-              </Link>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <Link
         to="/events"
-        className="flex justify-end px-32 text-sm text-white sm:text-base"
+        className="flex justify-end px-32 mt-4 text-white sm:text-lg"
       >
         See All
       </Link>
