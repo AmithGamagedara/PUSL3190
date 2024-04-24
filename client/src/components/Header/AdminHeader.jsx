@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';  // Changed from Link to NavLink
 import { useAuth } from '../../pages/AuthContext';
 import Logo from "../../assets/SL-Karate-Logo.svg";
 
@@ -14,19 +14,19 @@ const AdminHeader = () => {
                     {user ? (
                         <ul className="flex space-x-8">
                             <li>
-                                <Link to="/admin/dashboard" className="hover:text-gray-300">Dashboard</Link>
+                                <NavLink to="/admin/dashboard" className={({ isActive }) => isActive ? "text-[#FF1616] font-bold" : ""}>Dashboard</NavLink>
                             </li>
                             <li>
-                                <Link to="/admin/events" className="hover:text-gray-300">Events</Link>
+                                <NavLink to="/admin/events" className={({ isActive }) => isActive ? "text-[#FF1616] font-bold" : ""}>Events</NavLink>
                             </li>
                             <li>
-                                <Link to="/admin/learnings" className="hover:text-gray-300">Learnings</Link>
+                                <NavLink to="/admin/learnings" className={({ isActive }) => isActive ? "text-[#FF1616] font-bold" : ""}>Learnings</NavLink>
                             </li>
                             <li>
-                                <Link to="/admin/news" className="hover:text-gray-300">News</Link>
+                                <NavLink to="/admin/news" className={({ isActive }) => isActive ? "text-[#FF1616] font-bold" : ""}>News</NavLink>
                             </li>
                             <li>
-                                <Link to="/admin/rankings" className="hover:text-gray-300">Rankings</Link>
+                                <NavLink to="/admin/rankings" className={({ isActive }) => isActive ? "text-[#FF1616] font-bold" : ""}>Rankings</NavLink>
                             </li>
                             <li>
                                 <button onClick={signOut} className="px-12 text-red-600 hover:text-red-700">Logout</button>
@@ -35,7 +35,7 @@ const AdminHeader = () => {
                     ) : (
                         <ul className="flex space-x-8">
                             <li>
-                                <Link to="/login" className="px-12 text-red-600 hover:text-red-700">Login</Link>
+                                <NavLink to="/login" className={({ isActive }) => isActive ? "text-gray-300" : ""}>Login</NavLink>
                             </li>
                         </ul>
                     )}
@@ -46,3 +46,4 @@ const AdminHeader = () => {
 }
 
 export default AdminHeader;
+

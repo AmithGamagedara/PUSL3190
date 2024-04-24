@@ -1,6 +1,6 @@
 import React from "react";
 import Bg_Image from "../assets/bg-image.jpg";
-import Timer from "../helpers/Timer";
+import Timer from "../components/Landing_Page/Timer";
 import Advertistment from "../components/Landing_Page/Advertistment";
 import News_n_Media from "../components/Landing_Page/News_n_Media";
 import Upcoming_Events from "../components/Landing_Page/Upcoming_Events";

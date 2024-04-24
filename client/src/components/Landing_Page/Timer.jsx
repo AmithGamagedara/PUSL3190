@@ -43,7 +43,7 @@ export default function Timer({ starts }) {
   return (
     <div className="bg-gradient-to-tl from-[#161616] to-[#101010] py-8 sm:py-12 w-full flex items-center justify-center">
       <div className="flex flex-col items-center text-center">
-        <h1 className="font-bold text-sm sm:text-xl text-[#FF1616] sm:p-8 ">
+        <h1 className="text-sm font-bold text-white sm:text-xl sm:p-8 ">
           Next Event
         </h1>
         <div className="flex items-center justify-center mb-4 space-x-4 sm:mb-12 text-slate-50">

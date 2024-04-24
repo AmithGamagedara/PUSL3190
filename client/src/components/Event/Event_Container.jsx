@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import data from "../../helpers/Upcoming_data.json";
 import { FaRegCalendarAlt, FaHotel, FaPlane, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 
 export default function Event_Details() {
@@ -51,21 +53,21 @@ export default function Event_Details() {
     <div>
       <div className="flex flex-col h-screen">
         {/* Background image */}
-        <div className="relative flex-grow -z-10">
-          <img
-            src={card.image} // Replace 'background-image.jpg' with your image path
-            alt="Background"
-            className="absolute inset-0 object-cover object-top w-full h-full"
-          />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          {/* Title and registration button */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-24">
-            <h1 className="text-4xl font-bold text-center text-white md:text-6xl">{card.title}</h1>
-            <button className="px-6 py-3 mt-4 font-semibold text-white rounded-md bg-[#FF1616] hover:bg-red-600 focus:outline-none focus:bg-red-600 shadow-md cursor-pointer">
-              Register Now
-            </button>
-          </div>
-        </div>
+        <div className="relative flex-grow">
+  <img
+    src={card.image} 
+    alt="Background"
+    className="absolute inset-0 object-cover object-top w-full h-full"
+  />
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+  {/* Title and registration button */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center px-24">
+    <h1 className="text-4xl font-bold text-center text-white md:text-6xl">{card.title}</h1>
+    <Link to={`/events/${card.id}/register`} className="inline-block px-6 py-3 mt-4 font-semibold text-white rounded-md bg-[#FF1616] hover:bg-red-600 focus:outline-none focus:bg-red-600 shadow-md cursor-pointer z-10">
+      Register Now
+    </Link>
+  </div>
+</div>
         
       </div>
        {/* Timer section */}

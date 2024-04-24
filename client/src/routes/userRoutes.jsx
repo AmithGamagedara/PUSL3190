@@ -10,6 +10,7 @@ import News_Details from "../components/News/News_Container";
 import Event_Details from "../components/Event/Event_Container";
 import User_Profile from "../pages/User/User_Profile";
 import Assosiation_Profile from "../pages/Assosiation/Assosiation_Profile";
+import RegistrationForm from "../components/Event/RegistrationForm";
 
 const UserRoutes = () => {
     return (
@@ -25,6 +26,7 @@ const UserRoutes = () => {
             <Route path="/learning" element={<Learnings />} />
             <Route path="/news/:id" element={<News_Details/>} />
             <Route path="/events/:id" element={<Event_Details/>} />
+            <Route path="/events/:id/register" element={<RegistrationForm/>} />
         </Routes>
     );
 };
