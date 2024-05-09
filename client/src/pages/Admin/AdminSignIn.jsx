@@ -7,7 +7,7 @@ export default function AdminSignIn() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
   const { signIn } = useAuth();
-  const navigate = useNavigate(); // Use useNavigate to access navigation functionality
+  const navigate = useNavigate(); 
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -52,8 +52,7 @@ export default function AdminSignIn() {
     if (validate()) {
       if (signIn(email, password, "admin")) {
         console.log("Admin signed in successfully!");
-        // Redirect to admin dashboard or desired page
-        navigate("/admin/dashboard"); // Use navigate to redirect to admin dashboard
+          navigate("/admin/dashboard");
       } else {
         console.log("Admin sign-in failed!");
       }

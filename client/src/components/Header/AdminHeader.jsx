@@ -4,7 +4,7 @@ import { useAuth } from '../../pages/AuthContext';
 import Logo from "../../assets/SL-Karate-Logo.svg";
 
 const AdminHeader = () => {
-    const { user, signOut } = useAuth();
+    const { user, signOut, login } = useAuth();
 
     return (
         <header className="p-4 text-white bg-[#101010]/95 shadow-lg shadow-zinc-700/50 fixed top-0 left-0 w-full">
@@ -35,7 +35,7 @@ const AdminHeader = () => {
                     ) : (
                         <ul className="flex space-x-8">
                             <li>
-                                <NavLink to="/login" className={({ isActive }) => isActive ? "text-gray-300" : ""}>Login</NavLink>
+                            <button onClick={login} className="px-12 text-red-600 hover:text-red-700">Login</button>
                             </li>
                         </ul>
                     )}

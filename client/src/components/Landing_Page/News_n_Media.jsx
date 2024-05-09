@@ -23,6 +23,7 @@ export default function News_n_Media() {
                     src={news_card.image}
                     alt={news_card.title}
                   />
+                  
                 </div>
                 <h5 className="mt-4 text-xl font-semibold text-white sm:text-2xl line-clamp-2">
                   {news_card.title}

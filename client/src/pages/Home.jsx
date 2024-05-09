@@ -7,6 +7,7 @@ import Upcoming_Events from "../components/Landing_Page/Upcoming_Events";
 import Karate_Gallery from "../components/Landing_Page/Karate_Gallery";
 import Home_Slider from "../components/Landing_Page/Home_Slide";
 import Footer from "../components/Footer/Footer";
+import KarateLearningCenter from "../components/Landing_Page/KarateLearningCenter";
 
 export default function Home() {
   const starts = new Date().getTime() + 28 * 24 * 60 * 60 * 1000;
@@ -21,6 +22,7 @@ export default function Home() {
       <Home_Slider />
       <Timer starts={starts} />
       <Advertistment />
+      {/* <KarateLearningCenter/> */}
       <News_n_Media />
       <Upcoming_Events />
       <Karate_Gallery />

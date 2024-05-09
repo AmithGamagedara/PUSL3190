@@ -13,50 +13,26 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  const handleUserTypeChange = (e) => {
-    setUserType(e.target.value);
-  };
-
-  const handleFirstNameChange = (e) => {
-    setFirstName(e.target.value);
-  };
-
-  const handleLastNameChange = (e) => {
-    setLastName(e.target.value);
-  };
-
-  const handleAssociationNameChange = (e) => {
-    setAssociationName(e.target.value);
-  };
-
-  const handleLicenseIdChange = (e) => {
-    setLicenseId(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleMobileNumberChange = (e) => {
-    setMobileNumber(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
-
-  const handleAcceptTermsChange = (e) => {
-    setAcceptTerms(e.target.checked);
+  const validate = () => {
+    let tempErrors = {};
+    tempErrors.firstName = firstName ? "" : "First name is required.";
+    tempErrors.lastName = lastName ? "" : "Last name is required.";
+    tempErrors.email = (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) ? "" : "Email is not valid.";
+    tempErrors.mobileNumber = mobileNumber.length === 10 ? "" : "Mobile number is not valid.";
+    tempErrors.password = password.length > 5 ? "" : "Password must be at least 6 characters long.";
+    tempErrors.confirmPassword = (password === confirmPassword) ? "" : "Passwords do not match.";
+    tempErrors.acceptTerms = acceptTerms ? "" : "You must accept the terms and conditions.";
+    setErrors(tempErrors);
+    return Object.values(tempErrors).every(x => x === "");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // sign-up logic here
+    if (validate()) {
+      // Sign-up logic or API call
+    }
   };
 
   return (
@@ -71,13 +47,11 @@ export default function SignUp() {
       <div className="w-full max-w-md px-12 py-12 bg-white shadow-md sm:rounded-lg">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="userType" className="block">
-              User Type:
-            </label>
+            <label htmlFor="userType" className="block">User Type:</label>
             <select
               id="userType"
               value={userType}
-              onChange={handleUserTypeChange}
+              onChange={(e) => setUserType(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
             >
               <option value="student">Student</option>
@@ -87,118 +61,111 @@ export default function SignUp() {
           {userType === "student" && (
             <>
               <div className="mb-4">
-                <label htmlFor="firstName" className="block">
-                  First Name:
-                </label>
+                <label htmlFor="firstName" className="block">First Name:</label>
                 <input
                   type="text"
                   id="firstName"
                   value={firstName}
-                  onChange={handleFirstNameChange}
+                  onChange={(e) => setFirstName(e.target.value)}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
                 />
+                {errors.firstName && <p className="text-xs italic text-red-500">{errors.firstName}</p>}
               </div>
               <div className="mb-4">
-                <label htmlFor="lastName" className="block">
-                  Last Name:
-                </label>
+                <label htmlFor="lastName" className="block">Last Name:</label>
                 <input
                   type="text"
                   id="lastName"
                   value={lastName}
-                  onChange={handleLastNameChange}
+                  onChange={(e) => setLastName(e.target.value)}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
                 />
+                {errors.lastName && <p className="text-xs italic text-red-500">{errors.lastName}</p>}
               </div>
             </>
           )}
           {userType === "association" && (
             <>
               <div className="mb-4">
-                <label htmlFor="associationName" className="block">
-                  Association Name:
-                </label>
+                <label htmlFor="associationName" className="block">Association Name:</label>
                 <input
                   type="text"
                   id="associationName"
                   value={associationName}
-                  onChange={handleAssociationNameChange}
+                  onChange={(e) => setAssociationName(e.target.value)}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
                 />
+                {errors.associationName && <p className="text-xs italic text-red-500">{errors.associationName}</p>}
               </div>
               <div className="mb-4">
-                <label htmlFor="licenseId" className="block">
-                  License ID:
-                </label>
+                <label htmlFor="licenseId" className="block">License ID:</label>
                 <input
                   type="text"
                   id="licenseId"
                   value={licenseId}
-                  onChange={handleLicenseIdChange}
+                  onChange={(e) => setLicenseId(e.target.value)}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
                 />
+                {errors.licenseId && <p className="text-xs italic text-red-500">{errors.licenseId}</p>}
               </div>
             </>
           )}
           <div className="mb-4">
-            <label htmlFor="email" className="block">
-              Email:
-            </label>
+            <label htmlFor="email" className="block">Email:</label>
             <input
               type="email"
               id="email"
               value={email}
-              onChange={handleEmailChange}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
             />
+            {errors.email && <p className="text-xs italic text-red-500">{errors.email}</p>}
           </div>
           <div className="mb-4">
-            <label htmlFor="mobileNumber" className="block">
-              Mobile Number:
-            </label>
+            <label htmlFor="mobileNumber" className="block">Mobile Number:</label>
             <input
               type="tel"
               id="mobileNumber"
               value={mobileNumber}
-              onChange={handleMobileNumberChange}
+              onChange={(e) => setMobileNumber(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
             />
+            {errors.mobileNumber && <p className="text-xs italic text-red-500">{errors.mobileNumber}</p>}
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block">
-              Password:
-            </label>
+            <label htmlFor="password" className="block">Password:</label>
             <input
               type="password"
               id="password"
               value={password}
-              onChange={handlePasswordChange}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
             />
+            {errors.password && <p className="text-xs italic text-red-500">{errors.password}</p>}
           </div>
           <div className="mb-4">
-            <label htmlFor="confirmPassword" className="block">
-              Confirm Password:
-            </label>
+            <label htmlFor="confirmPassword" className="block">Confirm Password:</label>
             <input
               type="password"
               id="confirmPassword"
               value={confirmPassword}
-              onChange={handleConfirmPasswordChange}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-400"
             />
+            {errors.confirmPassword && <p className="text-xs italic text-red-500">{errors.confirmPassword}</p>}
           </div>
           <div className="flex items-center mb-4">
             <input
               type="checkbox"
               id="acceptTerms"
               checked={acceptTerms}
-              onChange={handleAcceptTermsChange}
+              onChange={(e) => setAcceptTerms(e.target.checked)}
               className="mr-2"
             />
             <label htmlFor="acceptTerms" className="text-sm">
               I accept the Terms and Conditions
             </label>
+            {errors.acceptTerms && <p className="text-xs italic text-red-500">{errors.acceptTerms}</p>}
           </div>
           <div className="flex justify-center">
             <button
@@ -210,10 +177,7 @@ export default function SignUp() {
           </div>
         </form>
         <div className="flex justify-center mt-4 text-sm text-gray-600">
-          Already have an account?&nbsp;&nbsp;
-          <Link to="/signin" className="text-blue-600 hover:underline">
-            Sign in
-          </Link>
+          Already have an account? <Link to="/signin" className="text-blue-600 hover:underline">Sign in</Link>
         </div>
       </div>
     </div>
