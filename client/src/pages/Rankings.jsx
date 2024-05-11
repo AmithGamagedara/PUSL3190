@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import rankingsData from "../helpers/Rankings_Data.json";
 
 export default function Rankings() {
   const [selectedCategory, setSelectedCategory] = useState(
     rankingsData.categories[0]
   );
+
+  useEffect(() => {
+    // Initialize AOS with a duration of 1000ms (1 second)
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const handleChangeCategory = (event) => {
     const categoryName = event.target.value;
@@ -17,8 +24,10 @@ export default function Rankings() {
   return (
     <div className="items-center justify-center min-h-screen px-32 py-16 bg-[#161616]">
       <div className="container px-4 py-8 mx-auto text-white">
-        <div className="flex items-center justify-between mb-4">
-          <span className="text-sm font-bold text-[#FF1616] sm:text-2xl">
+        <div
+          className="flex items-center justify-between mb-4">
+        
+          <span className="text-sm font-bold text-[#FF1616] sm:text-2xl" data-aos="fade-down">
             National Rankings
           </span>
           <div className="flex items-center">
@@ -27,7 +36,6 @@ export default function Rankings() {
               value={selectedCategory.name}
               onChange={handleChangeCategory}
               className="block w-3/4 px-3 py-2 text-gray-900 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              // Adjust the width here
             >
               {rankingsData.categories.map((category) => (
                 <option key={category.name} value={category.name}>
@@ -53,7 +61,7 @@ export default function Rankings() {
                 <th className="px-6 py-3 text-sm font-bold tracking-wider text-left uppercase">
                   Last Name
                 </th>
-                <th className="px-6 py-3 text-sm font-bold tracking-wider text-center uppercase ">
+                <th className="px-6 py-3 text-sm font-bold tracking-wider text-center uppercase">
                   Total Points
                 </th>
               </tr>

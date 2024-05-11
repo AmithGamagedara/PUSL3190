@@ -11,6 +11,7 @@ import Event_Details from "../components/Event/Event_Container";
 import User_Profile from "../pages/User/User_Profile";
 import Assosiation_Profile from "../pages/Assosiation/Assosiation_Profile";
 import RegistrationForm from "../components/Event/RegistrationForm";
+import AccuracyCheck from "../components/Learnings/AccuracyCheck";
 
 const UserRoutes = () => {
     return (
@@ -24,6 +25,7 @@ const UserRoutes = () => {
             <Route path="/events" element={<Events />} />
             <Route path="/ranking" element={<Rankings />} />
             <Route path="/learning" element={<Learnings />} />
+            <Route path="/learning/accuracy-check" element={<AccuracyCheck />} />
             <Route path="/news/:id" element={<News_Details/>} />
             <Route path="/events/:id" element={<Event_Details/>} />
             <Route path="/events/:id/register" element={<RegistrationForm/>} />

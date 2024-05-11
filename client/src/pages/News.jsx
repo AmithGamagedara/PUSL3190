@@ -1,18 +1,29 @@
-import React from "react";
-import Tournement_01 from "../assets/Tournement-01.jpg";
-import news_data from "../helpers/News_n_Media.json";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import news_data from "../helpers/News_n_Media.json";
 
 export default function News() {
+ 
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="items-center justify-center min-h-screen px-32 py-16 bg-[#161616] text-slate-50">
-      <h1 className="pt-10 pb-6 text-sm font-bold sm:text-2xl">
-        <span className="text-[#FF1616]">News & Media</span>
+    <div
+      className="items-center justify-center min-h-screen px-32 py-16 bg-[#161616] text-slate-50"
+    >
+      <h1
+        className="pt-10 pb-6 text-sm font-bold sm:text-2xl"
+        data-aos="fade-down"
+      >
+        <span className="text-[#FF1616] ">News & Media</span>
       </h1>
 
-      {/* News card */}
+      {/* News Cards */}
       {news_data.map((news_card) => (
-        <div key={news_card.id}>
+        <div key={news_card.id} data-aos="fade-right">
           <Link to={`/news/${news_card.id}`}>
             <div className="flex mb-8 overflow-hidden shadow-lg rounded-xl bg-zinc-800">
               {/* Left Side (Image) */}

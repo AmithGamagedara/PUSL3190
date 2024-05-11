@@ -31,8 +31,8 @@ export default function Timer({ starts }) {
     return (
       <div className="w-16 h-16 p-4 border-2 border-white rounded-lg sm:w-24 sm:h-24">
         <div className="text-center">
-          <div className="font-bold sm:text-3xl">{value}</div>
-          <div className="text-xs sm:text-sm">{label}</div>
+          <div className="font-sans font-bold sm:text-3xl">{value}</div>
+          <div className="font-sans text-xs sm:text-sm">{label}</div>
         </div>
       </div>
     );
@@ -43,10 +43,10 @@ export default function Timer({ starts }) {
   return (
     <div className="bg-gradient-to-tl from-[#161616] to-[#101010] py-8 sm:py-12 w-full flex items-center justify-center">
       <div className="flex flex-col items-center text-center">
-        <h1 className="text-sm font-bold text-white sm:text-xl sm:p-8 ">
+        <h1 className="font-sans text-sm font-bold text-white sm:text-xl sm:p-8">
           Next Event
         </h1>
-        <div className="flex items-center justify-center mb-4 space-x-4 sm:mb-12 text-slate-50">
+        <div className="flex items-center justify-center mb-4 space-x-4 font-sans sm:mb-12 text-slate-50">
           {renderSquare(days, "Days")}
           <div className="text-sm font-bold sm:text-3xl">:</div>
           {renderSquare(hours, "Hours")}

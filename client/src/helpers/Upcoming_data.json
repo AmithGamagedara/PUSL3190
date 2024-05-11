@@ -4,13 +4,13 @@
       "image": "https://www.wkf.net/imagenes/galeria/2021-senior-world-championships/WKF_World_Karate_Championship_Dubai2021_2_16.11.20201.jpg",
       "title": "Sri Lankan Karate Championship 2024",
       "startDate": "01",
-      "startMonth": "FEB",
+      "startMonth": "June",
       "endDate": "10",
-      "endMonth": "FEB",
+      "endMonth": "June",
       "location": "Galle indoor stadium",
       "moreInfo": "+ INFO",
       "registrationStatus": "Open",
-      "startTime": "2024-04-01T10:00:00Z"
+      "startTime": "2024-06-01T10:00:00Z"
     },
     {
       "id": 1,
@@ -23,7 +23,7 @@
       "location": "Galle indoor stadium",
       "moreInfo": "+ INFO",
       "registrationStatus": "Closed",
-      "startTime": "2024-04-05T15:30:00Z"
+      "startTime": "2024-03-15T15:30:00Z"
     },
     {
       "id": 2,
@@ -35,21 +35,21 @@
       "endMonth": "MAR",
       "location": "Galle indoor stadium",
       "moreInfo": "+ INFO",
-      "registrationStatus": "Open",
-      "startTime": "2024-04-10T18:45:00Z"
+      "registrationStatus": "Closed",
+      "startTime": "2024-03-01T18:45:00Z"
     },
     {
       "id": 3,
       "image": "https://www.wkf.net/imagenes/noticias/2017-wkf-official-calendar-announced-477.jpg",
       "title": "Sri Lankan Karate Championship 2024 (Kumite) - Western Province ",
       "startDate": "01",
-      "startMonth": "MAR",
+      "startMonth": "July",
       "endDate": "15",
-      "endMonth": "MAR",
+      "endMonth": "July",
       "location": "Galle indoor stadium",
       "moreInfo": "+ INFO",
       "registrationStatus": "Open",
-      "startTime": "2024-04-10T18:45:00Z"
+      "startTime": "2024-07-01T09:45:00Z"
     }
     
   ]
