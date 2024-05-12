@@ -7,11 +7,11 @@ import numpy as np
 from scipy.spatial import distance
 import base64
 
-# Initialize MediaPipe Pose
+
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 
-# Landmark indices of interest
+
 LANDMARKS = [
     11,  # Left shoulder
     12,  # Right shoulder
@@ -23,7 +23,7 @@ LANDMARKS = [
     24   # Right hip
 ]
 
-# Function to extract relevant landmarks from an image
+
 def extract_landmarks_from_image(image_path):
     image = cv2.imread(image_path)
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -34,7 +34,7 @@ def extract_landmarks_from_image(image_path):
         return [[landmarks[i].x, landmarks[i].y] for i in LANDMARKS]
     return None
 
-# Prepare the dataset by extracting features and saving to a JSON file
+
 def prepare_dataset(dataset_dir, output_json):
     dataset_features = {}
     for category in ["Punch", "Block"]:
@@ -54,7 +54,7 @@ def prepare_dataset(dataset_dir, output_json):
     with open(output_json, "w") as outfile:
         json.dump(dataset_features, outfile)
 
-# Load dataset features from a JSON file
+
 def load_dataset_features(json_path):
     with open(json_path, "r") as infile:
         return json.load(infile)
@@ -73,35 +73,26 @@ def calculate_similarity(input_features, dataset_features):
 
     normalized_score = best_score / (best_score + 1)
 
-    # Calculate accuracy as 1 - normalized_score
     accuracy = (1 - normalized_score) * 100
-    # accuracy = max(0, 100 - best_score)  # Adjust this formula based on empirical testing
+ 
     return best_match, accuracy
 
-# Extract relevant landmarks from the live camera feed
+
 def extract_landmarks_from_live_feed(landmarks):
     return [[landmarks[i].x, landmarks[i].y] for i in LANDMARKS]
-# Main real-time detection loop
+
 def main(image_path):
-    # Update the dataset path to the one you've provided
+   
     image = cv2.imread(image_path)
     # dataset_dir = r"C:\Users\amith\OneDrive\Desktop\karate_moves_dataset"
     output_json = "karate_features.json"
 
-    # Prepare and process the dataset and cache the features to 'karate_features.json'
-    # prepare_dataset(dataset_dir, output_json)
-
     dataset_features = load_dataset_features(output_json)
 
-    # cap = cv2.VideoCapture(0)
-
-    # while cap.isOpened():
-
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    # cv2.imshow('frame', image_rgb)
-    # cv2.waitKey(1000)
+   
     results = pose.process(image_rgb)
-    # print(results.pose_landmarks)
+   
 
     if results.pose_landmarks:
         input_features = extract_landmarks_from_live_feed(results.pose_landmarks.landmark)
@@ -109,23 +100,8 @@ def main(image_path):
         # Compare with the dataset and compute similarity
         match, accuracy = calculate_similarity(input_features, dataset_features)
         print(json.dumps({'match': match, 'accuracy': accuracy}))
-           # Display match and accuracy information on separate lines
-            # cv2.putText(image, f"Match: {match}", (10, 30),
-            # cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
-            # cv2.putText(image, f"Accuracy: {accuracy:.2f}%", (10, 60),
-            # cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
-
-            # Show the live camera feed
-            # cv2.imshow('Karate Punch/Block Accuracy', image)
-
-
-        # if cv2.waitKey(1) & 0xFF == 27:  # Press ESC to exit
-            # break
-
-    # cap.release()
-    # cv2.destroyAllWindows()
+         
 
 if __name__ == "__main__":
     image_path = sys.argv[1]
-    # print(image_path)
     main(image_path)

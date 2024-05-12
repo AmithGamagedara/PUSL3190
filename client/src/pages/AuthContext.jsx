@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const signIn = (email, password, userType) => {
-    // Here, implement your authentication logic or integrate with your backend/API
+    // Here, implement backend/API
     console.log("Signing in", email, password);
     // Simulate authentication logic
     if (userType === "user" && email === "user@example.com" && password === "password123") {
