@@ -39,6 +39,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+
 // Delete an event
 router.delete('/:id', async (req, res) => {
   try {

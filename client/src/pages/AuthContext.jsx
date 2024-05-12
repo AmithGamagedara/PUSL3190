@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     // Here, implement backend/API
     console.log("Signing in", email, password);
     // Simulate authentication logic
-    if (userType === "user" && email === "user@example.com" && password === "password123") {
+    if (userType === "user" && email === "user@example.com" && password === "password123#") {
       const userData = { name: "John Doe", email, userType: "user" };
       setUser(userData);
       localStorage.setItem("user", JSON.stringify(userData));

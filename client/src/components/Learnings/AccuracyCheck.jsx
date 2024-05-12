@@ -57,14 +57,14 @@ const AccuracyCheck = () => {
     }, 3000);
 
     return (
-        <div className='container p-4 mx-auto'>
-            <h1 className="mb-4 text-2xl font-bold">Check Your Karate Pose</h1>
+        <div className='container p-4 py-24 mx-auto'>
+            <h1 className="mb-4 text-2xl font-bold text-center text-red-500">Check Your Karate Pose Accuracy</h1>
             <Webcam
                 audio={false}
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
                 className="w-3/4 mx-auto border-2 border-black md:w-1/2"
-                videoConstraints={{ width: 640, height: 480 }}
+                videoConstraints={{ width: 440, height: 240 }}
             />
             {/* <button 
                 onClick={captureImage} 
@@ -72,10 +72,11 @@ const AccuracyCheck = () => {
             >
                 Check Accuracy
             </button> */}
-            <div className="mt-4">
-                {error && <p className="text-red-500">{error}</p>}
-                {accuracy && <p>{accuracy}</p>}
+            <div className="mt-8">
+                {error && <p className="text-center text-red-500">{error}</p>}
+                {accuracy && <p className="text-2xl font-semibold text-center text-green-500">{accuracy}</p>}
             </div>
+            <p className='mt-4 italic text-center'>*To use this feature, make sure there is a clear background.</p>
         </div>
     );
 };

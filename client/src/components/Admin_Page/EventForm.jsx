@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function EventForm() {
+const EventForm = () => {
   const [formData, setFormData] = useState({
     title: "",
     image: "",
@@ -55,6 +55,8 @@ function EventForm() {
   };
 
   return (
+  
+    <div className="pt-24 pb-8">
     <form
       onSubmit={handleSubmit}
       className="max-w-lg p-5 mx-auto mt-10 bg-white rounded-lg shadow-lg"
@@ -222,6 +224,7 @@ function EventForm() {
         Submit
       </button>
     </form>
+    </div>
   );
 }
 

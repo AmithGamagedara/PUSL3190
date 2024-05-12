@@ -27,32 +27,32 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-// Signin route
 router.post('/signin', async (req, res) => {
-  try {
-    const { email, password } = req.body;
+  const { email, password, userType } = req.body;
 
-    // Verify user exists
-    const user = await User.findOne({ email });
+  try {
+    // Check if user exists
+    const user = await User.findOne({ email, userType });
     if (!user) {
-      return res.status(404).json({ error: 'User not found.' });
+      return res.status(400).json({ message: 'Invalid email or password' });
     }
 
-    // Compare passwords
+    // Check password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(400).json({ error: 'Invalid credentials.' });
+      return res.status(400).json({ message: 'Invalid email or password' });
     }
 
-    // Sign a new JWT token
-    const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
-      expiresIn: '1h',
-    });
+    // Create JWT
+    const payload = { id: user.id, userType: user.userType };
+    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-    res.json({ user, token });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.json({ token });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server error');
   }
 });
+
 
 module.exports = router;

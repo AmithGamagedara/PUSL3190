@@ -97,7 +97,7 @@ def main(image_path):
     if results.pose_landmarks:
         input_features = extract_landmarks_from_live_feed(results.pose_landmarks.landmark)
 
-        # Compare with the dataset and compute similarity
+      
         match, accuracy = calculate_similarity(input_features, dataset_features)
         print(json.dumps({'match': match, 'accuracy': accuracy}))
          

@@ -38,6 +38,11 @@ app.post('/api/classify', upload.single('image'), async (req, res) => {
     });;
 })
 
+// // Middleware
+// app.use(express.json()); // for parsing application/json
+
+// // Routes
+// app.use('/api/users', userRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

@@ -54,10 +54,10 @@ export default function SignIn() {
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      if (signIn(email, password, userType)) {
+      if (await signIn(email, password, userType)) {
         console.log("Signed in successfully!");
         navigate("/");
       } else {
