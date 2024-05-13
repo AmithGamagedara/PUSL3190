@@ -28,7 +28,7 @@ cd PUSL3190
 ### Setting up the Server-Side
 Navigate to the backend directory:
 ```bash
-cd Server
+cd server
 ```
 
 Install the necessary Node.js dependencies:
@@ -44,7 +44,7 @@ npm start
 ### Setting up the Client-Side
 Open a new terminal and navigate to the frontend directory:
 ```bash
-cd Client
+cd client
 ```
 
 Install the required Node.js dependencies:
