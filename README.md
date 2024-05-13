@@ -18,7 +18,7 @@ SL Karate is a centralized web application designed to enhance the management an
 
 ## How to run application locally?
 
-clone the repositary
+### Clone the repositary
 To get started, clone the repository to your local machine:
 
 ```bash
